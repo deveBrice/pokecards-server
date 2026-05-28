@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const dotenv = require('dotenv');
 const userRoute = require('./routes/user.route.js');
+const pokemonRoute = require('./routes/pokemon.route.js');
 
 const cors = require('cors')
 dotenv.config();
@@ -30,6 +31,7 @@ mongoose.connect(process.env.MONGODB_URI)
 });*/
 
 
-app.use('/api/auth', userRoute)
+app.use('/api/auth', userRoute);
+app.use('/api/pokemon', pokemonRoute);
 
 module.exports = app;
