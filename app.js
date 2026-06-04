@@ -33,5 +33,6 @@ mongoose.connect(process.env.MONGODB_URI)
 
 app.use('/api/auth', userRoute);
 app.use('/api/pokemon', pokemonRoute);
+app.use('/pokemons', express.static(path.join(__dirname, 'pokemons')));
 
 module.exports = app;
