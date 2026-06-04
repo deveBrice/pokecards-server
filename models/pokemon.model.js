@@ -9,3 +9,5 @@ const pokemonSchema = mongoose.Schema({
     capacityPower: {type: Number, require: true},
     capacityDescription: {type: String, require: true},
 })
+
+module.exports = mongoose.model("Pokemon", pokemonSchema)
